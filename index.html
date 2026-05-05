@@ -5,25 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ElectronyOS</title>
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="icon" href="assets/logo.png">
 
 <style>
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #ffffff;
-  color: #0a0a0a;
+  background: #0b1220;
+  color: white;
+  overflow-x: hidden;
 }
 
-/* NAV */
+/* ===== ELECTRIC WAVE BACKGROUND ===== */
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 400px;
+  background: radial-gradient(circle at 50% 50%, rgba(37,99,235,0.6), transparent 60%);
+  top: -100px;
+  left: -50%;
+  transform: rotate(-5deg);
+  animation: moveWave 8s infinite linear;
+  z-index: 0;
+}
+
+@keyframes moveWave {
+  0% { transform: translateX(0) rotate(-5deg); }
+  50% { transform: translateX(-10%) rotate(-5deg); }
+  100% { transform: translateX(0) rotate(-5deg); }
+}
+
+/* ===== NAV ===== */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
@@ -33,203 +52,184 @@ nav {
 }
 
 .logo img {
-  height: 150px; /* FIXED: bigger logo */
+  width: 90px;
 }
 
-.logo span {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.nav-btns a {
-  margin-left: 15px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.primary-btn {
-  background: #2563eb;
+.nav a {
   color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.btn {
+  background: #2563eb;
   padding: 10px 16px;
   border-radius: 8px;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
   text-align: center;
-  padding: 90px 20px;
+  padding: 100px 20px 60px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
+  font-size: 52px;
 }
 
 .hero p {
-  color: #555;
+  color: #cbd5e1;
   font-size: 18px;
-}
-
-.cta {
-  margin-top: 25px;
 }
 
 .cta a {
   display: inline-block;
-  margin: 8px;
+  margin: 10px;
   padding: 14px 20px;
   border-radius: 10px;
   text-decoration: none;
-  font-weight: 600;
 }
 
-.blue {
+.primary {
   background: #2563eb;
   color: white;
 }
 
-.dark {
-  background: #111;
+.secondary {
+  background: rgba(255,255,255,0.1);
   color: white;
 }
 
-/* SECTIONS */
+/* ===== SECTION ===== */
 .section {
   padding: 70px 40px;
   max-width: 1100px;
   margin: auto;
+  position: relative;
+  z-index: 2;
 }
 
-/* FEATURES */
+/* ===== ICON CARDS ===== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
 }
 
 .card {
-  border: 1px solid #eee;
+  background: rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* BENEFITS */
-.benefits li {
+.icon {
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
-/* SCREENS */
+/* ===== SCREENSHOTS ===== */
 .screens img {
   width: 100%;
   border-radius: 12px;
   margin-top: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* TESTIMONIALS */
+/* ===== TESTIMONIALS ===== */
 .testimonials {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
 }
 
 .testimonial {
-  border: 1px solid #eee;
+  background: rgba(255,255,255,0.05);
   padding: 20px;
   border-radius: 12px;
 }
 
-/* FAQ */
-.faq {
-  border-top: 1px solid #eee;
+/* ===== DOWNLOAD ===== */
+.store img {
+  height: 50px;
+  margin: 10px;
 }
 
-.faq-item {
-  padding: 15px 0;
-  border-bottom: 1px solid #eee;
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 40px;
-  color: #777;
-}
-
-/* DOWNLOAD */
-.store-icons img {
-  height: 55px;
-  margin: 10px;
+  color: #94a3b8;
+  position: relative;
+  z-index: 2;
 }
 </style>
 </head>
 
 <body>
 
+<div class="wave"></div>
+
 <!-- NAV -->
 <nav>
   <div class="logo">
-    <img src="assets/logo.png" alt="logo">
-    
+    <img src="assets/logo.png">
+    <strong>ElectronyOS</strong>
   </div>
-
-  <div class="nav-btns">
+  <div class="nav">
     <a href="#features">Features</a>
     <a href="#faq">FAQ</a>
-    <a href="#" class="primary-btn">Sign In</a>
+    <a class="btn" href="https://wa.me/234XXXXXXXXXX">Sign In</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Manage Your Estate Smarter</h1>
-  <p>Visitor access, payments, electricity vending, and resident management in one system.</p>
+  <h1>Smart Estate Management System</h1>
+  <p>Visitor access • Payments • Electricity vending • Resident control</p>
 
   <div class="cta">
-    <a class="blue" href="https://wa.me/2347068613487">Get Started</a>
-    <a class="dark" href="#download">Download App</a>
+    <a class="primary" href="https://wa.me/234XXXXXXXXXX">Get Started</a>
+    <a class="secondary" href="#download">Download App</a>
   </div>
 </div>
 
 <!-- FEATURES -->
 <div class="section" id="features">
-  <h2>Features</h2>
+  <h2>Core Features</h2>
+
   <div class="grid">
     <div class="card">
-      <h3>Visitor Codes</h3>
-      <p>Secure entry system with expiry-based access.</p>
+      <div class="icon">🔐</div>
+      <h3>Visitor Access</h3>
+      <p>Secure codes with time-based expiry.</p>
     </div>
 
     <div class="card">
+      <div class="icon">💳</div>
       <h3>Payments</h3>
-      <p>Automate service charge collection and tracking.</p>
+      <p>Automated service charge tracking.</p>
     </div>
 
     <div class="card">
+      <div class="icon">🚫</div>
       <h3>Restrictions</h3>
-      <p>Block defaulters automatically until payment.</p>
+      <p>Auto-block defaulters instantly.</p>
     </div>
 
     <div class="card">
-      <h3>Electricity Vending</h3>
-      <p>Sell and track electricity usage per unit.</p>
+      <div class="icon">⚡</div>
+      <h3>Electricity</h3>
+      <p>Smart vending and usage tracking.</p>
     </div>
   </div>
 </div>
 
-<!-- BENEFITS -->
-<div class="section">
-  <h2>Why Estates Love ElectronyOS</h2>
-  <ul class="benefits">
-    <li>✔ Reduce unpaid service charges</li>
-    <li>✔ Improve estate security</li>
-    <li>✔ Automate manual admin work</li>
-    <li>✔ Transparent financial tracking</li>
-  </ul>
-</div>
-
 <!-- SCREENSHOTS -->
 <div class="section">
-  <h2>App Preview</h2>
+  <h2>Live System Preview</h2>
   <div class="screens">
     <img src="assets/screenshot1.png">
     <img src="assets/screenshot2.png">
@@ -239,69 +239,34 @@ footer {
 
 <!-- TESTIMONIALS -->
 <div class="section">
-  <h2>What Clients Say</h2>
+  <h2>What People Say</h2>
 
   <div class="testimonials">
     <div class="testimonial">
-      “We now track payments easily without stress.”
-      <br><strong>- Estate Manager, Lekki</strong>
+      “We finally stopped chasing payments manually.”
     </div>
-
     <div class="testimonial">
-      “Visitor control is now fully automated.”
-      <br><strong>- Facility Manager</strong>
+      “Visitor management is now fully automated.”
     </div>
-
     <div class="testimonial">
-      “Very simple and effective system.”
-      <br><strong>- Property Admin</strong>
+      “Very clean and easy system for estates.”
     </div>
   </div>
 </div>
 
-<!-- PRICING -->
-<div class="section">
-  <h2>Pricing</h2>
-  <p><strong>Visitor Code:</strong> ₦10,000/month</p>
-  <p><strong>Full System:</strong> ₦50,000/month + 1.5%</p>
-  <p><strong>Setup Fee:</strong> ₦30,000</p>
-</div>
-
 <!-- DOWNLOAD -->
 <div class="section" id="download" style="text-align:center;">
-  <h2>Download App</h2>
+  <h2>Download ElectronyOS</h2>
 
-  <div class="store-icons">
+  <div class="store">
     <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
     <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
   </div>
 </div>
 
-<!-- FAQ -->
-<div class="section" id="faq">
-  <h2>FAQ</h2>
-
-  <div class="faq">
-    <div class="faq-item">
-      <strong>Do I need internet for ElectronyOS?</strong>
-      <p>Yes, it is a cloud-based system accessible anywhere.</p>
-    </div>
-
-    <div class="faq-item">
-      <strong>Can I start with one feature?</strong>
-      <p>Yes, you can start with Visitor Code only.</p>
-    </div>
-
-    <div class="faq-item">
-      <strong>Is setup support included?</strong>
-      <p>Yes, onboarding support is provided after payment.</p>
-    </div>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <footer>
-  © 2026 ElectronyOS Technologies
+  © 2026 Electrony.xyz Technologies LTD
 </footer>
 
 </body>
