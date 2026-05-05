@@ -3,154 +3,184 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ElectronyOS - Smart Estate Management</title>
+<title>ElectronyOS</title>
 
 <style>
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background: #f8fafc;
-  color: #111;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
 }
 
 header {
-  background: #0f172a;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
-header h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 18px;
-  opacity: 0.9;
+.logo {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .btn {
-  display: inline-block;
   background: #2563eb;
   color: white;
-  padding: 14px 24px;
+  padding: 12px 18px;
   border-radius: 8px;
   text-decoration: none;
-  margin-top: 20px;
-  font-weight: bold;
 }
 
-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 50px 20px;
+.hero {
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.features {
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+.section {
+  padding: 60px 20px;
+}
+
+.grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
 }
 
 .card {
-  background: white;
   padding: 20px;
+  border: 1px solid #eee;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.pricing {
-  background: #0f172a;
-  color: white;
-  border-radius: 12px;
-  padding: 30px;
+.screenshot {
   margin-top: 30px;
 }
 
-.pricing h3 {
-  margin-top: 0;
+.screenshot img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.pricing {
+  text-align: center;
+}
+
+.price-box {
+  border: 1px solid #eee;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.testimonials {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+}
+
+.testimonial {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 12px;
 }
 
 footer {
   text-align: center;
-  padding: 30px;
-  background: #0f172a;
-  color: white;
-}
-
-@media(max-width: 700px) {
-  .features {
-    grid-template-columns: 1fr;
-  }
+  padding: 40px;
+  color: #777;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>ElectronyOS</h1>
-  <p>Control Your Estate. Automate Operations. Recover Payments Easily.</p>
-  <a class="btn" href="https://wa.me/2347068613487">Get Started on WhatsApp</a>
+<header class="container">
+  <div class="logo">ElectronyOS</div>
+  <a class="btn" href="https://wa.me/234XXXXXXXXXX">Get Started</a>
 </header>
 
-<section>
-  <h2>Why Estates Choose ElectronyOS</h2>
+<section class="hero">
+  <h1>Estate Management, Simplified</h1>
+  <p>Automate payments, control access, and manage residents in one system.</p>
+  <a class="btn" href="https://wa.me/234XXXXXXXXXX">Start Now</a>
+</section>
 
-  <div class="features">
+<section class="section container">
+  <div class="grid">
     <div class="card">
-      <h3>Visitor Access Control</h3>
-      <p>Generate secure visitor codes with expiry. No more manual entry logs.</p>
+      <h3>Visitor Access</h3>
+      <p>Generate secure visitor codes instantly.</p>
     </div>
-
     <div class="card">
-      <h3>Service Charge Collection</h3>
-      <p>Track payments and automatically identify defaulters.</p>
+      <h3>Payments</h3>
+      <p>Track and recover service charges easily.</p>
     </div>
-
     <div class="card">
-      <h3>Restriction System</h3>
-      <p>Automatically restrict residents with unpaid dues.</p>
+      <h3>Restrictions</h3>
+      <p>Automatically manage defaulters.</p>
     </div>
-
     <div class="card">
-      <h3>Electricity Vending</h3>
-      <p>Sell electricity units and track usage seamlessly.</p>
+      <h3>Electricity</h3>
+      <p>Vend and monitor electricity usage.</p>
     </div>
   </div>
 
-  <div class="pricing">
-    <h2>Simple Pricing</h2>
-
-    <h3>Visitor Code Plan</h3>
-    <p>₦10,000/month</p>
-
-    <h3>Full System</h3>
-    <p>₦50,000/month</p>
-    <p>+ 1.5% transaction fee</p>
-
-    <h3>Setup Fee</h3>
-    <p>₦30,000 (one-time)</p>
-
-    <a class="btn" href="https://wa.me/2347068613487">Start Now</a>
+  <div class="screenshot">
+    <img src="assets/screenshot1.png">
   </div>
 </section>
 
-<section>
-  <h2>Who This Is For</h2>
-  <p>
-    Estate Managers, Property Developers, and Facility Managers who want to:
-  </p>
-  <ul>
-    <li>Stop chasing residents for payments</li>
-    <li>Improve estate security</li>
-    <li>Automate daily operations</li>
-  </ul>
+<section class="section container pricing">
+  <h2>Simple Pricing</h2>
+
+  <div class="price-box">
+    <p><strong>Visitor Code:</strong> ₦10,000/month</p>
+    <p><strong>Full System:</strong> ₦50,000/month</p>
+    <p><strong>Setup Fee:</strong> ₦30,000</p>
+    <a class="btn" href="https://wa.me/234XXXXXXXXXX">Get Started</a>
+  </div>
+</section>
+
+<section class="section container">
+  <h2>Trusted by Estate Managers</h2>
+
+  <div class="testimonials">
+    <div class="testimonial">
+      <p>"We reduced payment issues significantly."</p>
+      <strong>- Estate Manager</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Security improved instantly."</p>
+      <strong>- Facility Manager</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Simple and effective."</p>
+      <strong>- Property Admin</strong>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 ElectronyOS Technologies</p>
+  <p>© 2026 ElectronyOS</p>
 </footer>
 
 </body>
