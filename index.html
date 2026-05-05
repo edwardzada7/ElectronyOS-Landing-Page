@@ -102,6 +102,26 @@ nav {
   color: white;
 }
 
+  .activity-feed {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activity-item {
+  background: rgba(255,255,255,0.05);
+  padding: 12px 15px;
+  border-radius: 10px;
+  border-left: 4px solid #2563eb;
+  animation: fadeIn 0.5s ease;
+  font-size: 14px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 /* ===== SECTION ===== */
 .section {
   padding: 70px 40px;
@@ -375,6 +395,15 @@ footer {
 
   </div>
 </div>
+<div class="section">
+  <h2>Live Activity</h2>
+
+  <div class="activity-feed" id="activityFeed">
+    <div class="activity-item">₦20,000 service charge paid by Mr. Ade</div>
+    <div class="activity-item">Visitor code generated for John (Code: 60551)</div>
+    <div class="activity-item">Electricity unit purchased (₦12,500)</div>
+  </div>
+</div>
   
 <!-- TESTIMONIALS -->
 <div class="section">
@@ -491,6 +520,35 @@ document.querySelectorAll(".faq-question").forEach(btn => {
     item.classList.toggle("active");
   });
 });
+</script>
+  <script>
+const activities = [
+  "₦20,000 service charge paid by Mr. Ade",
+  "Visitor code generated for Sarah (Code: 88421)",
+  "Electricity purchase of ₦15,000 completed",
+  "New resident added to Block B",
+  "₦50,000 service charge paid by Mr. Okafor",
+  "Visitor entry approved for David",
+  "Electricity unit purchased (₦8,500)",
+  "Resident account moved to restricted mode",
+  "Payment of ₦120,000 received successfully"
+];
+
+const feed = document.getElementById("activityFeed");
+
+setInterval(() => {
+  const random = activities[Math.floor(Math.random() * activities.length)];
+
+  const div = document.createElement("div");
+  div.className = "activity-item";
+  div.textContent = random;
+
+  feed.prepend(div);
+
+  if (feed.children.length > 6) {
+    feed.removeChild(feed.lastChild);
+  }
+}, 3000);
 </script>
 </body>
 </html>
