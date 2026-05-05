@@ -130,6 +130,27 @@ nav {
   margin-bottom: 10px;
 }
 
+  .payments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.payments img {
+  height: 50px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.payments img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+  
 /* ===== SCREENSHOTS ===== */
 .screens img {
   width: 100%;
@@ -138,6 +159,35 @@ nav {
   border: 1px solid rgba(255,255,255,0.1);
 }
 
+  .faq-item {
+  margin-top: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  color: #cbd5e1;
+  transition: max-height 0.3s ease;
+  padding-right: 10px;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  margin-bottom: 10px;
+}
 /* ===== TESTIMONIALS ===== */
 .testimonials {
   display: grid;
@@ -343,7 +393,84 @@ footer {
   </div>
 </div>
 
-<!-- DOWNLOAD -->
+  <div class="section" style="text-align:center;">
+  <h2>Integrated with Trusted Payment Providers</h2>
+  <p style="color:#94a3b8;">Secure and reliable transactions powered by industry leaders</p>
+
+  <div class="payments">
+    <img src="assets/paystack.png" alt="Paystack">
+    <img src="assets/providus.png" alt="Providus Bank">
+  </div>
+</div>
+
+  <div class="section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">What kind of properties can ElectronyOS work for?</button>
+    <div class="faq-answer">
+      ElectronyOS works for estates of all sizes, apartment blocks, gated communities, and similar residential developments.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How do I get started as a developer or estate?</button>
+    <div class="faq-answer">
+      Simply click the “Get Started” button or request access from the login page to begin onboarding.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What locations does ElectronyOS cover?</button>
+    <div class="faq-answer">
+      ElectronyOS currently operates nationwide across Nigeria.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What payment gateways do you use?</button>
+    <div class="faq-answer">
+      We integrate with trusted payment providers such as Paystack and Providus Bank to ensure secure transactions.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I generate reports as an estate admin?</button>
+    <div class="faq-answer">
+      Yes, you can generate detailed reports directly from the admin dashboard with a single click, and download them instantly.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Do you provide electricity meters?</button>
+    <div class="faq-answer">
+      Not yet, but this feature is currently in development and will be available soon.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">How does settlement work?</button>
+    <div class="faq-answer">
+      Settlements are processed the next day once funds are made available by the payment gateway.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Do you offer power (PAYG)?</button>
+    <div class="faq-answer">
+      This feature is coming soon as part of our electricity expansion roadmap.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Can I choose only one feature?</button>
+    <div class="faq-answer">
+      Yes, absolutely. You can subscribe to individual features such as Visitor Access, Electricity Vending, or Payment Collection, or choose the full system based on your needs.
+    </div>
+  </div>
+
+</div>
+  <!-- DOWNLOAD -->
 <div class="section" id="download" style="text-align:center;">
   <h2>Download ElectronyOS</h2>
 
